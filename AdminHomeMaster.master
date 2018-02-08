@@ -1,0 +1,435 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminHomeMaster.master.cs" Inherits="AdminHomeMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+     <title>Job portal</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <meta charset="UTF-8">
+       
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+        <link href="css/style.css" rel="stylesheet">
+        <script src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.slide.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+      <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <img src="http://placehold.it/150x50&text=TPC JOBS" alt="">
+                    </a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="AdminHome.aspx"><span class="glyphicon glyphicon-home"></span> Home</a>
+                        </li>
+                     
+                        <li>
+                            <a href="Applications.aspx"> <span class="glyphicon glyphicon-list-alt"></span> Applications</a>
+                        </li>
+                        <li>
+                            <a href="Companies.aspx"> <span class="glyphicon glyphicon-list-alt"></span> Companies</a>
+                        </li>
+
+
+
+                         <li >
+                            <a href="AdminJobs.aspx"> <span class="glyphicon glyphicon-list-alt"></span> Jobs</a>
+                        </li>
+              
+
+
+                        <li>
+                            <a href="AdminLogin.aspx"><span class="glyphicon glyphicon-lock"></span><asp:Label ID="login_logout" runat="server" Text="Login"></asp:Label> </a>
+                        </li>
+                        <li>
+                            <a href="ViewContact.aspx"> <span class="glyphicon glyphicon-envelope"></span>  View Contact </a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" ><asp:Label ID="myaccont" runat="server" Text="My account"></asp:Label> <span class="glyphicon glyphicon-user"></span> <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Profile</a></li>
+                                <li><a href="#">Edit</a></li>
+                                <li><a href="AdminLogin.aspx?id=Logout"> <asp:Label ID="myaccount_logout" runat="server" Text="Login"></asp:Label>           </a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+
+        <!-- Page Content -->
+        <div class="container">
+
+            <!-- Heading Row -->
+            <div class="row">
+                <div class="col-md-8">
+                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img src="images/b1.jpg" alt="...">
+                                <div class="carousel-caption">
+                                    
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="images/b2.jpg" alt="...">
+                                <div class="carousel-caption">
+                                   
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="images/b3.jpg" alt="...">
+                                <div class="carousel-caption">
+                                   
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- /.col-md-8 -->
+
+
+                <div class="col-md-4">
+                    <h1 class="jumbotron">Admin</h1>
+                    <p>Are you current student of TPC? Then what you are waiting for? Register now and access to top industrial recruiter. 
+
+                    <h3>Features</h3>    
+                    <ol class="inline">    
+                        <li>List of various jobs available</li>   
+                        <li>Apply for job</li>   
+                        <li>Take benifit of being student of Thapar Polytechnic college</li>  
+                        </ol>    
+
+
+                            
+         
+                            </div>
+                            <!-- /.col-md-4 -->
+                            </div>
+                            <!-- /.row -->
+
+
+
+                            
+
+
+                            <!-- Call to Action Well 
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="well text-center">
+                                        contact us
+                                    </div>
+                                </div>-->
+                            <!-- /.col-lg-12 -->
+                            <!--</div>-->
+                            <!-- /.row -->
+
+
+                           
+  
+
+  <!-- Row end -->
+
+  
+  
+  
+
+  
+
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        <div class="panel panel-primary">
+      <div class="panel-heading">Welcome Admin</div>
+      <div class="panel-body">Panel Content</div>
+    </div>
+        </asp:ContentPlaceHolder>
+    </div>
+
+
+
+                            
+
+
+
+
+
+                            </div>
+                            <!-- /.container --> 
+                            <hr/>
+                            <footer class="footer1">
+                                <div class="container">
+
+                                    <div class="row"><!-- row -->
+
+                                        <div class="col-lg-3 col-md-3"><!-- widgets column left -->
+                                            <ul class="list-unstyled clear-margins"><!-- widgets -->
+
+                                                <li class="widget-container widget_nav_menu"><!-- widgets list -->
+
+                                                    <h1 class="title-widget">Resume</h1>
+
+                                                    <ul>
+                                                        <li><a  href="ResumeContetent.aspx"><i class="fa fa-angle-double-right"></i>Resume Contents Contents</a></li>
+                                                        <li><a  href="ResumeFormat.aspx"><i class="fa fa-angle-double-right"></i> Resume Format</a></li>
+                                                        <li><a  href="ResumeWritting.aspx"><i class="fa fa-angle-double-right"></i> Resume writting</a></li>
+                                                        <li><a  href="ResumeTool.aspx"><i class="fa fa-angle-double-right"></i> Resume Reprentation Tools</a></li>
+                                                        <li><a  href="https://www.livecareer.com/resume-examples"><i class="fa fa-angle-double-right"></i> Sample Resumes</a></li>
+                                                    </ul>
+
+                                                </li>
+
+                                            </ul>
+
+
+                                        </div><!-- widgets column left end -->
+
+
+
+                                        <div class="col-lg-3 col-md-3"><!-- widgets column left -->
+
+                                            <ul class="list-unstyled clear-margins"><!-- widgets -->
+
+                                                <li class="widget-container widget_nav_menu"><!-- widgets list -->
+
+                                                    <h1 class="title-widget">Interview</h1>
+
+                                                    <ul>
+                                                        <li><a  href="InterviewWhat.aspx"><i class="fa fa-angle-double-right"></i> What is an Interview ?</a></li>
+                                                        <li><a  href="InterviewPrepare.aspx"><i class="fa fa-angle-double-right"></i> Prepare for Interview</a></li>
+                                                        <li><a  href="InterviewQuestions.aspx"><i class="fa fa-angle-double-right"></i> Interview common questions</a></li>
+                                                        <li><a  href="https://www.youtube.com/watch?v=mLMvGeb-e-0"><i class="fa fa-angle-double-right"></i> Interview videos for freshers</a></li>
+                                                        <li><a  href="InterviewManners.aspx"><i class="fa fa-angle-double-right"></i> Interview Manners</a></li>
+                                                    </ul>
+
+                                                </li>
+
+                                            </ul>
+
+
+                                        </div><!-- widgets column left end -->
+
+
+
+                                        <div class="col-lg-3 col-md-3"><!-- widgets column left -->
+
+                                            <ul class="list-unstyled clear-margins"><!-- widgets -->
+
+                                                <li class="widget-container widget_nav_menu"><!-- widgets list -->
+
+                                                    <h1 class="title-widget">Related links</h1>
+
+                                                    <ul>
+                                                        <li><a  href="Counselers.aspx"><i class="fa fa-angle-double-right"></i> Counslers</a></li>
+                                                        <li><a  href="Teachers.aspx"><i class="fa fa-angle-double-right"></i> Department </a></li>
+                                                        <li><a  href="WhatsNew.aspx"><i class="fa fa-angle-double-right"></i>Whats'n new </a></li>
+                                                        <li><a  href="AboutPage.aspx"><i class="fa fa-angle-double-right"></i>About website</a></li>
+                                                        <li><a  href="OriginalDesiners.aspx"><i class="fa fa-angle-double-right"></i> Website developer and desiners</a></li>
+                                                    </ul>
+
+                                                </li>
+
+                                            </ul>
+
+
+                                        </div><!-- widgets column left end -->
+
+
+                                        <div class="col-lg-3 col-md-3"><!-- widgets column center -->
+
+
+
+                                            <ul class="list-unstyled clear-margins"><!-- widgets -->
+
+                                                <li class="widget-container widget_recent_news"><!-- widgets list -->
+
+                                                    <h1 class="title-widget">Contact Detail </h1>
+
+                                                    <div class="footerp"> 
+
+                                                        <h2 class="title-median">TPC Jobs</h2>
+                                                        <p><b>Email id:</b> <a href="mailto:">mail</a></p>
+                                                        <p><b>Helpline Numbers </b>
+
+                                                            <b style="color:#ffc106;">(8AM to 10PM):</b>   </p>
+
+                                                        <p><b>Corp Office / Postal Address</b></p>
+                                                        <p><b>Phone Numbers : </b>999999999, </p>
+                                                        <p> 99999999999</p>
+                                                    </div>
+
+                                                    <div class="social-icons">
+
+                                                        <ul class="nomargin">
+
+                                                            <a href="https://www.facebook.com><i class="fa fa-facebook-square fa-3x social-fb" id="social"></i></a>
+                                                            <a href="https://twitter.com"><i class="fa fa-twitter-square fa-3x social-tw" id="social"></i></a>
+                                                            <a href="https://plus.google.com"><i class="fa fa-google-plus-square fa-3x social-gp" id="social"></i></a>
+                                                            <a href="mailto:@gmail.com"><i class="fa fa-envelope-square fa-3x social-em" id="social"></i></a>
+
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </footer>
+                            <!--header-->
+
+                            <div class="footer-bottom">
+
+                                <div class="container">
+
+                                    <div class="row">
+
+                                        <div class="col-md-6">
+
+                                            <div class="copyright">
+
+                                                © 2017, TPC Jobs, All rights reserved
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-md-6">
+
+                                            <div class="design">
+
+                                                <a href="#">TPC Digital center </a> |  <a target="_blank" href="">Web Design & Development by Abhishek kumar </a>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            <div class="modal fade" id="myModal" role="dialog">
+                                <div class="modal-dialog">
+
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header" style="padding:35px 50px;">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
+                                        </div>
+                                        <div class="modal-body" style="padding:40px 50px;">
+                                            <form role="form">
+                                                <div class="form-group">
+                                                    <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+                                                    <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+                                                    <input type="text" class="form-control" id="psw" placeholder="Enter password">
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label><input type="checkbox" value="" checked>Remember me</label>
+                                                </div>
+                                                <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <script>
+                                $(document).ready(function () {
+                                    $("#myBtn").click(function () {
+                                        $("#myModal").modal();
+                                    });
+                                });
+                            </script>
+
+
+
+
+
+
+
+                            <script type="text/javascript">
+
+                                if (jQuery().carouFredSel) {
+                                    jQuery('.es-carousel-wrapper').each(function () {
+                                        jQuery(this).find('ul').carouFredSel({
+                                            auto: false,
+                                            prev: jQuery(this).find('.es-nav-prev'),
+                                            next: jQuery(this).find('.es-nav-next'),
+                                            width: '100%'
+                                        });
+                                    });
+                                }
+                            </script> 
+                            <!-- slide script end-->
+                            <!-- jQuery -->
+                            <script src="js/jquery.js"></script>
+
+                            <!-- Bootstrap Core JavaScript -->
+                            <script src="js/bootstrap.min.js"></script>
+
+    </form>
+</body>
+</html>

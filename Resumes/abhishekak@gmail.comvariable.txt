@@ -1,0 +1,19 @@
+/*
+Sign Up
+
+
+SignNameTextbox
+SignRegistrationNumber
+signdepartment
+signsemester
+SignPhoneNumber
+SignEmailText
+signState
+signDistic
+signCity
+signAddress
+signPincode
+SignLoginID
+signpassword
+
+*/
